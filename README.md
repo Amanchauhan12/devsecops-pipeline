@@ -1,4 +1,4 @@
-\# 🚀 DevSecOps CI/CD Pipeline
+\#  DevSecOps CI/CD Pipeline
 
 
 
@@ -6,7 +6,7 @@ A production-grade DevSecOps pipeline built with GitHub Actions, Docker, and Pro
 
 
 
-\## 🏗️ Architecture
+\##  Architecture
 
 
 
