@@ -32,7 +32,7 @@ Code Push → GitHub Actions Pipeline → Docker → Live Monitoring
 
 
 
-\## 🛠️ Tech Stack
+\##  Tech Stack
 
 Node.js 18 · Express.js · Jest · Supertest · Docker · Docker Compose · GitHub Actions · Trivy · Prometheus · Grafana · ESLint
 
