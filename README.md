@@ -1,78 +1,44 @@
-\#  DevSecOps CI/CD Pipeline
+# DevSecOps CI/CD Pipeline
 
+Simple devsecops project using Docker, Github Actions and Prometheus/Grafana for monitoring.
 
+## What it does
 
-A production-grade DevSecOps pipeline built with GitHub Actions, Docker, and Prometheus/Grafana monitoring.
+Code Push -> Github Actions -> Docker Build -> Deploy -> Monitoring
 
+| Stage | Tool |
+|-------|------|
+| Code Quality | ESLint |
+| Testing | Jest + Supertest |
+| Build | Docker |
+| Security Scan | Trivy + npm audit |
+| Deploy | Docker |
+| Monitoring | Prometheus + Grafana |
 
+## Tech Used
 
-\##  Architecture
+Node.js, Express, Jest, Docker, Docker Compose, Github Actions, Trivy, Prometheus, Grafana, ESLint
 
+## Dashboard
 
+![Dashboard](./dashboard-screenshot.png)
 
-Code Push → GitHub Actions Pipeline → Docker → Live Monitoring
+Shows total requests, errors, uptime and memory usage in real time.
 
+## How to Run
 
-
-| Stage | Tool | Purpose |
-
-|-------|------|---------|
-
-| Code Quality | ESLint | Enforce code standards |
-
-| Run Tests | Jest + Supertest | Unit \& integration tests (100% coverage) |
-
-| Build | Docker (multi-stage) | Build minimal, non-root production image |
-
-| Security Scan | Trivy + npm audit | Vulnerability scanning |
-
-| Deploy | Docker | Container deployment |
-
-| Monitoring | Prometheus + Grafana | Live metrics dashboard |
-
-
-
-\##  Tech Stack
-
-Node.js 18 · Express.js · Jest · Supertest · Docker · Docker Compose · GitHub Actions · Trivy · Prometheus · Grafana · ESLint
-
-
-
-\##  Live Dashboard
-
-!\[Dashboard](./dashboard-screenshot.png)
-
-
-
-Tracks total requests, error rate, uptime, and heap memory usage in real time.
-
-
-
-\##  Run Locally
-
-\\`\\`\\`bash
-
+```bash
 git clone https://github.com/Amanchauhan12/devsecops-pipeline
-
 cd devsecops-pipeline
-
+cp .env.example .env
 docker-compose up -d
+```
 
-\\`\\`\\`
+- App: http://localhost:3000
+- Metrics: http://localhost:3000/metrics
+- Prometheus: http://localhost:9090
+- Grafana: http://localhost:3001 (login from .env file)
 
+## Author
 
-
-\- App: http://localhost:3000
-
-\- Metrics: http://localhost:3000/metrics
-
-\- Prometheus: http://localhost:9090
-
-\- Grafana: http://localhost:3001 (admin / admin123)
-
-
-
-\##  Author
-
-\*\*Aman Chauhan\*\* — Software Engineer
-
+Aman Chauhan
