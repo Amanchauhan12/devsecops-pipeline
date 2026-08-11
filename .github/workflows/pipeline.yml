@@ -78,7 +78,7 @@ jobs:
             ${{ env.IMAGE_NAME }}:latest
           for i in {1..10}; do
             if curl -sf http://localhost:3000/health; then
-              echo "✅ Health check passed"
+              echo " Health check passed"
               break
             fi
             echo "Waiting for container... attempt $i"
@@ -158,15 +158,15 @@ jobs:
         run: |
           sleep 5
           curl -f http://localhost:3000/health
-          echo "✅ Deployment successful!"
+          echo " Deployment successful!"
 
       - name: Pipeline Summary
         run: |
           echo "=================================="
-          echo "✅ Code Quality  - PASSED"
-          echo "✅ Tests         - PASSED"
-          echo "✅ Docker Build  - PASSED"
-          echo "✅ Security Scan - PASSED"
-          echo "✅ Deployment    - PASSED"
+          echo " Code Quality  - PASSED"
+          echo " Tests         - PASSED"
+          echo " Docker Build  - PASSED"
+          echo " Security Scan - PASSED"
+          echo " Deployment    - PASSED"
           echo "=================================="
-          echo "🚀 Pipeline completed successfully!"
+          echo " Pipeline completed successfully!"
