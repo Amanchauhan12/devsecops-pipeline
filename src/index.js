@@ -2,7 +2,7 @@ const express = require('express');
 const app     = express();
 const PORT    = process.env.PORT || 3000;
 
-// ✅ Add metrics tracking
+//  Add metrics tracking
 let totalRequests  = 0;
 let successCount   = 0;
 let errorCount     = 0;
@@ -39,7 +39,7 @@ app.get('/health', (req, res) => {
   });
 });
 
-// ✅ Metrics endpoint for Prometheus
+//  Metrics endpoint for Prometheus
 app.get('/metrics', (req, res) => {
   const uptimeSeconds = (Date.now() - startTime) / 1000;
   const metrics = `
